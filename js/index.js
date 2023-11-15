@@ -1,7 +1,7 @@
 Promise.all([
   d3.csv("data/small_flow_data_2018.csv"),
   d3.json("data/worldmap_topojson.json"),
-  d3.json("data/countries-10m.json"),
+  d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-10m.json"),
 ]).then(([data, us, country]) => {
   const { nodes, links } = processData(data, us, country);
   
